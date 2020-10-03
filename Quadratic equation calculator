@@ -1,0 +1,52 @@
+# Exercise 8
+import math
+
+#Function
+def quadratic_formula():
+        print("Solution for the Quadratic Equation")
+        print("ax^2+bx+c=0")
+        a=input("Enter coefficient a: ")
+        b=input("Enter coefficient b: ")
+        c=input("Enter coefficient c: ")
+        print("Finding solutions for " + a + "x^2+" + b + "x+" +c+ "=0")
+
+        a=float(a)
+        b=float(b)
+        c=float(c)
+
+        #Calculating the discriminant
+
+        discriminant = b*b-4*a*c
+
+        if discriminant > 0:
+            x1=(-b-math.sqrt(discriminant))/(2*a)
+            x2=(-b+math.sqrt(discriminant))/(2*a)
+            print(x1)
+            print(x2)
+
+        elif discriminant == 0:
+            x=-b/(2*a)
+            print("x_1=x_2=" + str(x))
+            print("==========================================")
+
+        else:
+            print("No solutions for the given coefficients")
+            print("Because the discriminant is negative.")
+            print("The discriminant is: " +str(discriminant))
+
+# Main
+quadratic_formula()
+
+repeat = input("press 1 to repeat, 0 to terminate: ")
+print("============================================")
+
+while repeat == "1":
+    quadratic_formula()
+    print("============================================")
+    repeat = input("press 1 to repeat, 0 to terminate: ")
+    print("============================================")
+else:
+    print("Thank you for using Quadratic Equation Calculator!")
+
+
+
