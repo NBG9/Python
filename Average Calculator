@@ -1,0 +1,47 @@
+import math
+print("")
+print("Welcome to NBG's average calculator")
+print("")
+
+def avg_calculator():
+    k = input("How many numbers do you have? : ")
+    print("You have " +k+ " numbers.")
+
+    n1 = 0
+    t = 0
+
+    while n1 < int(k):
+
+        t=float(t)
+        n = input("Enter your number: ")
+        n1+=1
+        t = t + int(n)
+
+
+
+    else:
+        k = int(k)
+        t = int(t)
+
+        print("")
+        print("Average is:" + str(t) + "/" + str(k) + ".")
+        print("")
+        print("average is " + str(t/k))
+        print("")
+
+
+
+avg_calculator()
+
+print("Press 1 to repeat, 0 to terminate")
+repeat=input("Your choice: ")
+print("")
+while repeat == "1":
+    avg_calculator()
+    print("")
+    print("Press 1 to repeat, 0 to terminate")
+    repeat = input("Your choice: ")
+    print("")
+else:
+    print("Thank you")
+
