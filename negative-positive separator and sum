@@ -1,0 +1,29 @@
+import math
+
+Array1 = []
+number = int(input("enter the numbres: "))
+Array1.append(number)
+
+while number != 0:
+    number = int(input("Enter number: "))
+    Array1.append(number)
+
+print(Array1)
+neg = []
+pos = []
+neg_sum = 0
+pos_sum= 0
+
+for i in range(len(Array1)):
+    if int(Array1[i]) < 0:
+        neg_sum = neg_sum + int(Array1[i])
+        neg.append(Array1[i])
+    else:
+        pos_sum = pos_sum + int(Array1[i])
+        pos.append(Array1[i])
+
+print("Negatives: " + str(neg))
+print("Positives: " + str(pos))
+
+print("Sum of negatives: " + str(neg_sum))
+print("Sum of positives: " + str(pos_sum))
