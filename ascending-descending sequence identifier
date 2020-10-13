@@ -1,0 +1,21 @@
+# Determining whether the sequence ascends or descends
+
+n_max = int(input("How many numbers have you got?: "))
+list = []
+# List stores numbers
+
+for number in range (n_max):
+    my_number = int(input("Enter number: "))
+    list.append(my_number)
+
+ascending_list = sorted(list, reverse=False)
+descending_list = sorted(list, reverse=True)
+
+print(list)
+
+if list == ascending_list:
+    print("Sequence is ascending.")
+elif list == descending_list:
+    print("Sequence is descending.")
+else:
+    print("Sequence is neither ascending nor descending.")
