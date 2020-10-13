@@ -1,0 +1,26 @@
+import math
+
+# n is number of inputs
+# nn is the actual input
+n = int(input("Enter a positive integer at least equal to 2: "))
+if n >= 2:
+    count_nn = "1"
+    count_nn = float(count_nn)
+    nn = int(input("Enter an integer: "))
+    count_nn += 1
+    array_nn = []
+    array_nn.append(nn)
+    while count_nn <= n:
+        nn = int(input("Enter an integer: "))
+        array_nn.append(nn)
+        print(array_nn)
+        count_nn += 1
+    else:
+        print(array_nn)
+        array_nn.sort()
+        print("Largest value of inputs is: ", array_nn[-1])
+        print("Second largest value of inputs is: ", array_nn[-2])
+
+else:
+    print("Input is less than 2.")
+
