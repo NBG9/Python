@@ -1,0 +1,25 @@
+print("Finding greatest common denominator")
+
+number_1 = int(input("Enter the first number: "))
+number_2 = int(input("Enter the second number: "))
+
+if number_1 >= number_2:
+    max_num = number_1
+    min_num = number_2
+else:
+    max_num = number_2
+    min_num = number_1
+
+remainder = 2
+
+while remainder != 0:
+    remainder = (max_num % min_num)
+    if remainder == 0:
+        greatest_common_div = min_num
+    else:
+        max_num = min_num
+        min_num = remainder
+
+print("Greatest common divider of")
+print(number_1, "and", number_2, "is")
+print(greatest_common_div)
